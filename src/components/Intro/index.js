@@ -15,13 +15,7 @@ export default function Intro() {
           <a className="more">Saiba mais</a>
         </div>
         <div className="right-side">
-          <img src="https://images.unsplash.com/photo-1543224175-3c2a7bee9602?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" />
-          <img
-            className="center"
-            src="https://images.unsplash.com/photo-1551194201-5b634bd23931?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-          />
-
-          <img src="https://images.unsplash.com/photo-1544380935-17ce6a107313?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80" />
+          <div class="mask"></div>
         </div>
       </div>
     </IntroArea>

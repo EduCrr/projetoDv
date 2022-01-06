@@ -33,6 +33,7 @@ export const ListaServicos = styled.div`
   .photo {
     width: 250px;
     img {
+      box-shadow: 5px 10px 100px #a8a5a4;
       height: 250px;
       width: 100%;
       object-fit: cover;

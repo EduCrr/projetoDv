@@ -4,25 +4,25 @@ import { useState } from "react";
 export default function Servicos() {
   const [works, setWorks] = useState([
     {
-      title: "teste",
+      title: "Rastreador",
       photo:
         "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
       reverse: true,
     },
     {
-      title: "teste",
+      title: "Casos de traição",
       photo:
         "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
       reverse: false,
     },
     {
-      title: "teste",
+      title: "Localização de veículos",
       photo:
         "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
       reverse: true,
     },
     {
-      title: "teste",
+      title: "Localização de Pessoas",
       photo:
         "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
       reverse: false,
