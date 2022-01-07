@@ -6,12 +6,16 @@ export const InfoArea = styled.section`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  h2 {
+    font-size: 35px;
+  }
   .first-note,
   .second-note {
     background-color: #d6d1ce;
     width: 450px;
     padding: 20px;
     box-shadow: 5px 10px 100px #a8a5a4;
+
     img {
       margin-bottom: 30px;
       padding: 0;

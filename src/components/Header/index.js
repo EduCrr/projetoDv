@@ -1,5 +1,6 @@
 import React from "react";
 import { HeaderArea } from "./estilo.js";
+import { Link } from "react-router-dom";
 export default function Header() {
   return (
     <HeaderArea>
@@ -23,9 +24,9 @@ export default function Header() {
           </nav>
         </div>
         <div className="contato">
-          <a className="more" href="">
+          <Link className="more" to="/contato">
             Contato
-          </a>
+          </Link>
         </div>
       </div>
     </HeaderArea>

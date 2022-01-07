@@ -47,10 +47,13 @@ html ::-webkit-scrollbar-track {
   background-color: #dad4d2;
 }
 
+button,
 a.more {
   padding: 10px 20px;
   border-radius: 20px;
   color: white;
   text-decoration: none;
   background-color: #0b0a0b;
+  outline: 0;
+  border: 0;
 }
