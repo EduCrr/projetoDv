@@ -4,12 +4,27 @@ import Sobre from "../../components/Sobre";
 import Servicos from "../../components/Servicos";
 import Info from "../../components/Info";
 export default function Home() {
+  const pageTransition = {
+    in: {
+      opacity: 1,
+      x: 0,
+      scale: 1,
+    },
+    out: {
+      opacity: 0,
+      x: "-100vh",
+      scale: 0.8,
+    },
+  };
+  const styleTransition = {
+    duration: 0.5,
+  };
   return (
     <div>
-      <Intro />
-      <Sobre />
-      <Servicos />
-      <Info />
+      <Intro page={pageTransition} transitonEffect={styleTransition} />
+      <Sobre page={pageTransition} transitonEffect={styleTransition} />
+      <Servicos page={pageTransition} transitonEffect={styleTransition} />
+      <Info page={pageTransition} transitonEffect={styleTransition} />
     </div>
   );
 }

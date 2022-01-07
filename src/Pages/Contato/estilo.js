@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ContatoArea = styled.section`
+export const ContatoArea = styled.div`
   max-width: 1200px;
   margin: 4rem auto;
   display: flex;

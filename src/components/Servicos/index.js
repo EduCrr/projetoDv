@@ -1,7 +1,9 @@
 import React from "react";
 import { ServicosArea, ListaServicos } from "./estilo";
 import { useState } from "react";
-export default function Servicos() {
+import { motion } from "framer-motion";
+
+export default function Servicos({ page, transitonEffect }) {
   const [works, setWorks] = useState([
     {
       title: "Rastreador",
@@ -36,7 +38,14 @@ export default function Servicos() {
 
   return (
     <ServicosArea>
-      <div className="servicos">
+      <motion.div
+        initial={page.out}
+        animate={page.in}
+        exit={page.out}
+        variants={page}
+        transition={transitonEffect}
+        className="servicos"
+      >
         <div className="left-side">
           <h1>Serviços</h1>
           <p>
@@ -56,7 +65,7 @@ export default function Servicos() {
             </ListaServicos>
           ))}
         </div>
-      </div>
+      </motion.div>
     </ServicosArea>
   );
 }
