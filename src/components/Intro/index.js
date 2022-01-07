@@ -16,8 +16,8 @@ export default function Intro({ page, transitonEffect }) {
           <h1>Serviços </h1>
           <h1>Investigativos</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Oferecemos serviços de Investigações Particulares, atuamos na região
+            ...
           </p>
           <br />
           <a className="more">Saiba mais</a>

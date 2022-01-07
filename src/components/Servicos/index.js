@@ -2,7 +2,7 @@ import React from "react";
 import { ServicosArea, ListaServicos } from "./estilo";
 import { useState } from "react";
 import { motion } from "framer-motion";
-
+import Fade from "react-reveal/Fade";
 export default function Servicos({ page, transitonEffect }) {
   const [works, setWorks] = useState([
     {
@@ -49,19 +49,23 @@ export default function Servicos({ page, transitonEffect }) {
         <div className="left-side">
           <h1>Serviços</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Nosso trabalho é realizado com total sigilo absoluto, mantendo a
+            confiança de nossos clientes e honestidade em cada caso realizado.
+            Confira nossa lista de serviços prestados!
           </p>
         </div>
+
         <div className="right-side">
           {works.map((item, k) => (
             <ListaServicos key={k} change={item.reverse}>
-              <div className="text">
-                <h3>{item.title}</h3>
-              </div>
-              <div className="photo">
-                <img src={item.photo} alt={item.title} />
-              </div>
+              <Fade top>
+                <div className="text">
+                  <h3>{item.title}</h3>
+                </div>
+                <div className="photo">
+                  <img src={item.photo} alt={item.title} />
+                </div>
+              </Fade>
             </ListaServicos>
           ))}
         </div>

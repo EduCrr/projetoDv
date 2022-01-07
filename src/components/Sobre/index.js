@@ -1,7 +1,11 @@
 import React from "react";
 import { SobreArea } from "./estilo";
-import Computer from "@material-ui/icons/Computer";
+import CheckBox from "@material-ui/icons/CheckBox";
+import EnhancedEncryption from "@material-ui/icons/EnhancedEncryption";
+import MobileFriendly from "@material-ui/icons/MobileFriendly";
+import VerifiedUser from "@material-ui/icons/VerifiedUser";
 import { motion } from "framer-motion";
+import Fade from "react-reveal/Fade";
 export default function Sobre({ page, transitonEffect }) {
   return (
     <SobreArea>
@@ -13,30 +17,37 @@ export default function Sobre({ page, transitonEffect }) {
         transition={transitonEffect}
         className="container"
       >
-        <div className="left-side">
-          <img src="https://images.unsplash.com/photo-1600110351781-eef60efcfc3d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" />
-        </div>
-        <div className="right-side">
-          <h1>Sobre nós</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-          <div className="infos-area">
-            <div className="info">
-              <Computer />
-              <h5>Resultado</h5>
-            </div>
-            <div className="info">
-              <Computer />
-              <h5>Segurança</h5>
-            </div>
-            <div className="info">
-              <Computer />
-              <h5>Sigilo</h5>
+        <Fade bottom>
+          <div className="left-side">
+            <img src="https://images.unsplash.com/photo-1600110351781-eef60efcfc3d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" />
+          </div>
+        </Fade>
+        <Fade top delay={500}>
+          <div className="right-side">
+            <h1>Sobre nós</h1>
+            <p>
+              O Detetive Particular, é um profissional preparado para desvendar
+              as suas dúvidas tais como: traição, pessoas envolvidas com drogas,
+              desvio de conduta de funcionários, localização de pessoas
+              desaparecidas, dossiê de pessoas físicas e jurídicas etc.. com
+              ética, seriedade, priorizo pela resolução do seu problema.
+            </p>
+            <div className="infos-area">
+              <div className="info">
+                <CheckBox />
+                <h5>Resultado</h5>
+              </div>
+              <div className="info">
+                <VerifiedUser />
+                <h5>Segurança</h5>
+              </div>
+              <div className="info">
+                <EnhancedEncryption />
+                <h5>Sigilo</h5>
+              </div>
             </div>
           </div>
-        </div>
+        </Fade>
       </motion.div>
     </SobreArea>
   );

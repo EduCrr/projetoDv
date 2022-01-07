@@ -3,6 +3,7 @@ import Intro from "../../components/Intro";
 import Sobre from "../../components/Sobre";
 import Servicos from "../../components/Servicos";
 import Info from "../../components/Info";
+import ArrowDropUp from "@material-ui/icons/ArrowDropUp";
 export default function Home() {
   const pageTransition = {
     in: {
@@ -17,7 +18,7 @@ export default function Home() {
     },
   };
   const styleTransition = {
-    duration: 0.5,
+    duration: 0.6,
   };
   return (
     <div>
@@ -25,6 +26,9 @@ export default function Home() {
       <Sobre page={pageTransition} transitonEffect={styleTransition} />
       <Servicos page={pageTransition} transitonEffect={styleTransition} />
       <Info page={pageTransition} transitonEffect={styleTransition} />
+      <a href="#home" className="scrolltop">
+        <ArrowDropUp />
+      </a>
     </div>
   );
 }

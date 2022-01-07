@@ -5,25 +5,14 @@ export default function Header() {
   return (
     <HeaderArea>
       <div className="container">
-        <div className="logo">
+        <div className="logo" id="home">
           <h1>Logo</h1>
         </div>
-        <div className="menu">
-          <nav>
-            <ul>
-              <li>
-                <a href="">Home</a>
-              </li>
-              <li>
-                <a href="">Sobre</a>
-              </li>
-              <li>
-                <a href="">Serviços</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
+
         <div className="contato">
+          <Link className="more" to="/">
+            Home
+          </Link>
           <Link className="more" to="/contato">
             Contato
           </Link>

@@ -2,6 +2,7 @@ import React from "react";
 import { ContatoArea } from "./estilo";
 import WhatsApp from "@material-ui/icons/WhatsApp";
 import { motion } from "framer-motion";
+import InputMask from "react-input-mask";
 
 export default function Contato() {
   const pageTransition = {
@@ -17,7 +18,7 @@ export default function Contato() {
     },
   };
   const styleTransition = {
-    duration: 0.5,
+    duration: 0.6,
   };
   return (
     <ContatoArea>
@@ -35,7 +36,7 @@ export default function Contato() {
         />
         <div className="icons">
           <WhatsApp />
-          <h3>99 999934234</h3>
+          <h3>99 99999999</h3>
         </div>
         <div className="icons">
           <WhatsApp />
@@ -54,7 +55,12 @@ export default function Contato() {
           <input placeholder="Nome" required type="text" />
           <input placeholder="Email" required type="email" />
           <input placeholder="Cidade" required type="text" />
-          <input placeholder="Telefone" />
+          <InputMask
+            mask="(99) 99999-9999"
+            placeholder="Telefone"
+            type="text"
+            name="phone"
+          />
           <textarea placeholder="Mensagem" required type="text"></textarea>
           <button type="submit">Enviar</button>
         </form>

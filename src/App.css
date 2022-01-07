@@ -57,3 +57,30 @@ a.more {
   outline: 0;
   border: 0;
 }
+
+a.scrolltop {
+  color: white;
+  position: fixed;
+  right: 15px;
+  bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px 7px;
+  background-color: #fda915;
+  border-radius: 0.4rem;
+  z-index: 999;
+  transition: 0.4s;
+}
+a.scrolltop svg {
+  animation: myAnim 2s ease 0s infinite alternate both;
+}
+@keyframes myAnim {
+  0% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
+}

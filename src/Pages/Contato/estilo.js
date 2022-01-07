@@ -55,6 +55,7 @@ export const ContatoArea = styled.div`
         cursor: pointer;
         margin-top: 15px;
         padding: 15px;
+        font-weight: bold;
       }
     }
   }

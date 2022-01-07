@@ -5,23 +5,14 @@ export const HeaderArea = styled.header`
   margin: auto;
   margin-top: 25px;
   .container {
+    z-index: 99;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    nav {
-      ul,
-      li {
-        list-style: none;
-        margin: 0px 10px;
-        display: flex;
-        a {
-          text-transform: uppercase;
-          font-weight: bold;
-          font-size: 15px;
-          color: #0b0a0b;
-          text-decoration: none;
-        }
-      }
+  }
+  .contato {
+    a {
+      margin-left: 20px;
     }
   }
 `;
