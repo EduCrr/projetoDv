@@ -59,4 +59,25 @@ export const ContatoArea = styled.div`
       }
     }
   }
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+
+    .icons {
+      align-items: center;
+      justify-content: center;
+    }
+    .form-side {
+      align-items: center;
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 560px) {
+    .photo-side {
+      width: 100%;
+      padding: 0px 20px;
+      img {
+      }
+    }
+  }
 `;

@@ -10,7 +10,7 @@ export const SobreArea = styled.section`
     justify-content: space-between;
 
     .left-side {
-      width: 450px;
+      max-width: 450px;
       img {
         width: inherit;
         box-shadow: 5px 10px 100px #a8a5a4;
@@ -44,6 +44,36 @@ export const SobreArea = styled.section`
             margin: 15px auto;
           }
         }
+      }
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    padding: 0px 20px;
+    .container {
+      flex-direction: column;
+      text-align: center;
+      .left-side {
+        img {
+          height: auto;
+        }
+      }
+      .right-side {
+        width: 100%;
+        margin: 15px auto;
+        h1 {
+          margin: auto;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 560px) {
+    .infos-area {
+      flex-direction: column;
+      margin: auto;
+      width: 30% !important;
+      .info {
+        border-left: 0px !important;
+        border-bottom: 10px solid #dad4d2;
       }
     }
   }

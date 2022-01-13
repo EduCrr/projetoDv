@@ -12,7 +12,7 @@ export const InfoArea = styled.section`
   .first-note,
   .second-note {
     background-color: #d6d1ce;
-    width: 450px;
+    max-width: 450px;
     padding: 20px;
     box-shadow: 5px 10px 100px #a8a5a4;
 
@@ -26,5 +26,13 @@ export const InfoArea = styled.section`
   }
   .second-note {
     margin-top: 6rem;
+  }
+  @media screen and (max-width: 1024px) {
+    padding: 0px 20px;
+    flex-direction: column;
+    .first-note,
+    .second-note {
+      text-align: center;
+    }
   }
 `;

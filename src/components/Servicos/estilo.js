@@ -9,12 +9,31 @@ export const ServicosArea = styled.section`
     align-items: flex-start;
     justify-content: space-between;
     .left-side {
-      width: 450px;
+      max-width: 450px;
     }
     .right-side {
-      width: 500px;
+      max-width: 500px;
       display: flex;
       flex-direction: column;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    padding: 0px 20px;
+  }
+  @media screen and (max-width: 768px) {
+    text-align: center;
+    .servicos {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .right-side {
+        margin: 20px auto;
+      }
+    }
+  }
+  @media screen and (max-width: 560px) {
+    .right-side {
+      margin: 0px !important;
     }
   }
 `;
@@ -37,6 +56,16 @@ export const ListaServicos = styled.div`
       height: 250px;
       width: 100%;
       object-fit: cover;
+    }
+  }
+  @media screen and (max-width: 560px) {
+    flex-direction: column;
+    margin: auto;
+    .text {
+      h3 {
+        padding: 20px 0px !important;
+        margin: auto;
+      }
     }
   }
 `;

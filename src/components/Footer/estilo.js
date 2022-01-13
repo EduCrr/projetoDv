@@ -18,4 +18,13 @@ export const FooterArea = styled.section`
     font-size: 16px;
     font-weight: bold;
   }
+  @media screen and (max-width: 1024px) {
+    padding: 0px 20px;
+  }
+  @media screen and (max-width: 560px) {
+    flex-direction: column;
+    .right-side {
+      margin-top: 20px !important;
+    }
+  }
 `;

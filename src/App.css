@@ -84,3 +84,13 @@ a.scrolltop svg {
     transform: translateY(-10px);
   }
 }
+@media screen and (max-width: 950px) {
+  a.scrolltop {
+    right: 5vh;
+  }
+}
+@media screen and (max-width: 550px) {
+  a.scrolltop {
+    right: 3vh;
+  }
+}

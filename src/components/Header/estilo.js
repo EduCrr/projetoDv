@@ -15,4 +15,7 @@ export const HeaderArea = styled.header`
       margin-left: 20px;
     }
   }
+  @media screen and (max-width: 1024px) {
+    padding: 0px 20px !important;
+  }
 `;
