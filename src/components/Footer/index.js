@@ -1,7 +1,7 @@
 import React from "react";
 import { FooterArea } from "./estilo";
 import WhatsApp from "@material-ui/icons/WhatsApp";
-import Facebook from "@material-ui/icons//Facebook";
+//import Facebook from "@material-ui/icons//Facebook";
 export default function Footer() {
   let date = new Date();
   return (
@@ -18,7 +18,6 @@ export default function Footer() {
         >
           <WhatsApp />
         </a>
-        <Facebook />
       </div>
     </FooterArea>
   );

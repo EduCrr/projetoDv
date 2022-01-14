@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { ContatoArea } from "./estilo";
 import WhatsApp from "@material-ui/icons/WhatsApp";
 import Send from "@material-ui/icons/Send";
 import { motion } from "framer-motion";
 import InputMask from "react-input-mask";
-
+import emailjs from "emailjs-com";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 export default function Contato() {
+  const [nome, setNome] = useState("");
+  const [email, setEmail] = useState("");
+  const [cidade, setCidade] = useState("");
+  const [telefone, setTelefone] = useState("");
+  const [mensagem, setMensagem] = useState("");
+  const [erro, setErro] = useState("");
   const pageTransition = {
     in: {
       opacity: 1,
@@ -21,8 +30,52 @@ export default function Contato() {
   const styleTransition = {
     duration: 0.6,
   };
+  function validaEmail() {
+    const regex = /^[a-zA-Z0-9]+@(?:[a-zA-Z0-9]+\.)+[A-Za-z]+$/;
+    if (regex.test(email)) {
+      setEmail(email);
+    } else {
+      setErro("Preencha os campos corretamente!");
+    }
+  }
+  const handleSendEmail = (e) => {
+    e.preventDefault();
+    setErro("");
+    validaEmail();
+    if (
+      nome.trim() === "service_m4u1xcy" ||
+      email.trim() === "" ||
+      mensagem.trim() === ""
+    ) {
+      setErro("Preencha os campos corretamente!");
+      return;
+    }
+    emailjs
+      .sendForm(
+        "service_m4u1xcy",
+        "template_eosqd24",
+        e.target,
+        "user_Z2SH19kfxdKqqoXKu4i8Q"
+      )
+      .then(
+        (result) => {
+          toast.dark("Email enviado com sucesso!");
+          setNome("");
+          setEmail("");
+          setTelefone("");
+          setCidade("");
+          setMensagem("");
+          setErro("");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+  };
   return (
     <ContatoArea>
+      <ToastContainer autoClose={3000} />
       <motion.div
         initial="out"
         animate="in"
@@ -31,10 +84,7 @@ export default function Contato() {
         transition={styleTransition}
         className="photo-side"
       >
-        <img
-          src="https://images.unsplash.com/photo-1488998427799-e3362cec87c3?ixlib=rb-3.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-          alt=""
-        />
+        <img src="/assets/contato.jpg" alt="contato" />
         <div className="icons">
           <WhatsApp />
           <a
@@ -58,18 +108,49 @@ export default function Contato() {
         transition={styleTransition}
         className="form-side"
       >
-        <form>
-          <input placeholder="Nome" required type="text" />
-          <input placeholder="Email" required type="email" />
-          <input placeholder="Cidade" required type="text" />
+        <form onSubmit={handleSendEmail}>
+          <input
+            value={nome}
+            onChange={(e) => setNome(e.target.value)}
+            placeholder="Nome"
+            required
+            type="text"
+            name="nome"
+          />
+          <input
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Email"
+            required
+            type="email"
+            name="email"
+          />
+          <input
+            value={cidade}
+            onChange={(e) => setCidade(e.target.value)}
+            placeholder="Cidade"
+            required
+            type="text"
+            name="cidade"
+          />
           <InputMask
+            value={telefone}
+            onChange={(e) => setTelefone(e.target.value)}
             mask="(99) 99999-9999"
             placeholder="Telefone"
             type="text"
-            name="phone"
+            name="telefone"
           />
-          <textarea placeholder="Mensagem" required type="text"></textarea>
+          <textarea
+            value={mensagem}
+            onChange={(e) => setMensagem(e.target.value)}
+            placeholder="Mensagem"
+            required
+            type="text"
+            name="mensagem"
+          ></textarea>
           <button type="submit">Enviar</button>
+          {erro !== "" && <p>{erro}</p>}
         </form>
       </motion.div>
     </ContatoArea>

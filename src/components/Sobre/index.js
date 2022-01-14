@@ -19,7 +19,7 @@ export default function Sobre({ page, transitonEffect }) {
       >
         <Fade bottom>
           <div id="sobre" className="left-side">
-            <img src="/assets/sobre-foto.jpg" />
+            <img src="/assets/sobre-foto.jpg" alt="sobre" />
           </div>
         </Fade>
         <Fade top delay={500}>
