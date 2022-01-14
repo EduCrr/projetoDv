@@ -7,11 +7,17 @@ export default function Footer() {
   return (
     <FooterArea>
       <div className="left-side">
-        Detetive |{" "}
+        Detetive Vicencia |{" "}
         <span>Todos os direitos reservados {date.getFullYear()}</span>
       </div>
       <div className="right-side">
-        <WhatsApp />
+        <a
+          style={{ color: " #0b0a0b" }}
+          href="http://api.whatsapp.com/send?1=pt_BR&phone=5561985702576"
+          target="_blank"
+        >
+          <WhatsApp />
+        </a>
         <Facebook />
       </div>
     </FooterArea>

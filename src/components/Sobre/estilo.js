@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const SobreArea = styled.section`
   max-width: 1200px;
-  margin: 4rem auto;
+  margin: 3rem auto 5rem auto;
 
   .container {
     display: flex;
@@ -52,11 +52,7 @@ export const SobreArea = styled.section`
     .container {
       flex-direction: column;
       text-align: center;
-      .left-side {
-        img {
-          height: auto;
-        }
-      }
+
       .right-side {
         width: 100%;
         margin: 15px auto;

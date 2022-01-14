@@ -16,11 +16,13 @@ export default function Intro({ page, transitonEffect }) {
           <h1>Serviços </h1>
           <h1>Investigativos</h1>
           <p>
-            Oferecemos serviços de Investigações Particulares, atuamos na região
-            ...
+            Oferecemos serviços de Investigações Particulares, atuamos em
+            Brasília e região.
           </p>
           <br />
-          <a className="more">Saiba mais</a>
+          <a href="#sobre" className="more">
+            Saiba mais
+          </a>
         </div>
         <div className="right-side">
           <div class="mask"></div>

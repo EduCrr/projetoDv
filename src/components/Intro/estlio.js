@@ -27,14 +27,6 @@ export const IntroArea = styled.section`
           background-position: 100% 0;
         }
       }
-      @-webkit-keyframes move {
-        0% {
-          background-position: 0 0;
-        }
-        50% {
-          background-position: 100% 0;
-        }
-      }
       .mask {
         width: 600px;
         height: 650px;
@@ -49,8 +41,7 @@ export const IntroArea = styled.section`
   }
   @media screen and (max-width: 1024px) {
     .container {
-      overflow-x: hidden !important ;
-      overflow-x: unset;
+      overflow: hidden !important ;
       margin-top: 6rem;
       flex-direction: column;
       .right-side,
@@ -59,8 +50,6 @@ export const IntroArea = styled.section`
         padding: 10px;
       }
       .right-side {
-        position: absolute;
-        margin-top: 8rem;
         .mask {
           padding: 0px 20px;
           height: 75vh;
@@ -71,14 +60,22 @@ export const IntroArea = styled.section`
   }
   @media screen and (max-width: 550px) {
     .container {
-      margin-top: 10rem;
+      height: auto;
+      margin-top: 5rem;
+      .left-side {
+        h1 {
+          font-size: 50px;
+        }
+      }
       .right-side {
         .mask {
-          margin-top: 2rem;
           height: 59vh;
-          width: 600px;
+          max-width: 600px;
         }
       }
     }
+  }
+  @media screen and (max-width: 380px) {
+    height: 120vh;
   }
 `;

@@ -18,7 +18,7 @@ export default function Sobre({ page, transitonEffect }) {
         className="container"
       >
         <Fade bottom>
-          <div className="left-side">
+          <div id="sobre" className="left-side">
             <img src="/assets/sobre-foto.jpg" />
           </div>
         </Fade>
@@ -26,12 +26,12 @@ export default function Sobre({ page, transitonEffect }) {
           <div className="right-side">
             <h1>Sobre nós</h1>
             <p>
-              O Detetive Particular, é um profissional preparado para solucionar
-              as suas dúvidas tais como: traição, pessoas envolvidas com drogas,
-              desvio de conduta de funcionários, localização de pessoas
-              desaparecidas, dossiê de pessoas físicas e jurídicas etc.. com
-              ética, integridade, meu objetivo é contribuir para achar a verdade
-              sobre o seu caso.
+              A Detetive Particular Vicencia, é uma profissional preparada para
+              solucionar as suas dúvidas tais como: traição, pessoas envolvidas
+              com drogas, desvio de conduta de funcionários, localização de
+              pessoas desaparecidas, dossiê de pessoas físicas e jurídicas etc..
+              com ética e integridade, meu objetivo é contribuir para achar a
+              verdade sobre o seu caso.
             </p>
             <div className="infos-area">
               <div className="info">

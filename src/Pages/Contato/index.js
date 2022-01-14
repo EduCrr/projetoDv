@@ -1,6 +1,7 @@
 import React from "react";
 import { ContatoArea } from "./estilo";
 import WhatsApp from "@material-ui/icons/WhatsApp";
+import Send from "@material-ui/icons/Send";
 import { motion } from "framer-motion";
 import InputMask from "react-input-mask";
 
@@ -36,11 +37,17 @@ export default function Contato() {
         />
         <div className="icons">
           <WhatsApp />
-          <h3>99 99999999</h3>
+          <a
+            style={{ color: " #0b0a0b", textDecoration: "none" }}
+            href="http://api.whatsapp.com/send?1=pt_BR&phone=5561985702576"
+            target="_blank"
+          >
+            <h3>(61) 98570-2576</h3>
+          </a>
         </div>
         <div className="icons">
-          <WhatsApp />
-          <h3>contato@dv.com.br</h3>
+          <Send />
+          <h3>contato@detetivevicencia.com.br</h3>
         </div>
       </motion.div>
       <motion.div

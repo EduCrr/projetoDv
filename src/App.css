@@ -48,16 +48,24 @@ html ::-webkit-scrollbar-track {
 }
 
 button,
-a.more {
+a.more,
+a.active {
   padding: 10px 20px;
   border-radius: 20px;
   color: white;
   text-decoration: none;
   background-color: #0b0a0b;
   outline: 0;
+  transition: all ease 0.3s;
   border: 0;
 }
-
+a.active {
+  background-color: #fda915 !important;
+}
+a.more:hover {
+  transition: all ease 0.3s;
+  background-color: #fda915;
+}
 a.scrolltop {
   color: white;
   position: fixed;
@@ -91,6 +99,6 @@ a.scrolltop svg {
 }
 @media screen and (max-width: 550px) {
   a.scrolltop {
-    right: 3vh;
+    right: 2vh;
   }
 }

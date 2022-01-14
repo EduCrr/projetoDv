@@ -23,6 +23,9 @@ export const FooterArea = styled.section`
   }
   @media screen and (max-width: 560px) {
     flex-direction: column;
+    .left-side {
+      text-align: center;
+    }
     .right-side {
       margin-top: 20px !important;
     }

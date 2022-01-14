@@ -18,4 +18,12 @@ export const HeaderArea = styled.header`
   @media screen and (max-width: 1024px) {
     padding: 0px 20px !important;
   }
+  @media screen and (max-width: 380px) {
+    .container {
+      flex-direction: column;
+    }
+    .contato {
+      margin-top: 40px;
+    }
+  }
 `;
