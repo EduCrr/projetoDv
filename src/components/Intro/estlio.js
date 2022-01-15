@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const IntroArea = styled.section`
-  height: 95vh;
+  height: 90vh;
   max-width: 1200px;
   margin: auto;
   .container {
@@ -51,16 +51,24 @@ export const IntroArea = styled.section`
       }
       .right-side {
         .mask {
-          padding: 0px 20px;
-          height: 75vh;
-          width: 85vh;
+          position: absolute;
+          margin-left: auto;
+          margin-right: auto;
+          left: 0;
+          right: 0;
+          text-align: center;
+          height: 500px;
+          width: 550px;
         }
       }
     }
   }
+  @media screen and (max-width: 912px) {
+    height: 55vh;
+  }
   @media screen and (max-width: 550px) {
+    height: 80vh;
     .container {
-      height: auto;
       margin-top: 5rem;
       .left-side {
         h1 {
@@ -69,13 +77,17 @@ export const IntroArea = styled.section`
       }
       .right-side {
         .mask {
+          position: relative !important;
           height: 59vh;
-          max-width: 600px;
+          max-width: 600px !important;
+          margin-top: -5rem;
         }
       }
     }
   }
   @media screen and (max-width: 380px) {
-    height: 120vh;
+    height: 100vh;
   }
 `;
+
+/* */

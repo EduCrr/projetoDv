@@ -29,8 +29,8 @@ export default function Sobre({ page, transitonEffect }) {
               A Detetive Particular Vicencia, é uma profissional preparada para
               solucionar as suas dúvidas tais como: traição, pessoas envolvidas
               com drogas, desvio de conduta de funcionários, localização de
-              pessoas desaparecidas, dossiê de pessoas físicas e jurídicas etc..
-              com ética e integridade, meu objetivo é contribuir para achar a
+              pessoas desaparecidas, dossiê de pessoas físicas e jurídicas etc.
+              Com ética e integridade, meu objetivo é contribuir para achar a
               verdade sobre o seu caso.
             </p>
             <div className="infos-area">

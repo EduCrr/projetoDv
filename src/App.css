@@ -101,4 +101,22 @@ a.scrolltop svg {
   a.scrolltop {
     right: 2vh;
   }
+  .not-found img {
+    width: 100% !important;
+  }
+}
+
+.not-found {
+  display: flex;
+  margin: 4rem auto;
+  max-width: 1200px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+.not-found img {
+  height: auto;
+  width: 600px;
+  object-fit: cover;
 }
